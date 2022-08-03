@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Bl1xvan/nodeportfolio#readme",
   "dependencies": {
+    "axios": "^0.27.2",
     "express": "^4.18.1",
     "gridfs-stream": "^1.1.1",
     "mongoose": "^6.5.0",
