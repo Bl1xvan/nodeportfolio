@@ -1,0 +1,29 @@
+.maingrid{
+    display: flex;
+    flex-direction: row;
+    width: 70vw;
+    height: 100vh;
+    margin-left: auto;
+}
+
+.pgbtncont{
+    margin: auto 0 auto;
+}
+
+#previous{
+    position: relative;
+    left: 20px;
+}
+
+#next{
+    position: relative;
+    right: 20px;
+}
+
+.pgbtn{
+    background-color: rgb(203, 255, 255);
+    padding: 30px;
+    border-radius: 50%;
+    border: none;
+    z-index: 2;
+}

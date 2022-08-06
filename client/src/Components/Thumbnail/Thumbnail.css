@@ -1,0 +1,77 @@
+.main-cont{
+    width: 100%; 
+    height: 100%;
+   }
+   
+   .thumbnail-cont{
+     width: 100%;
+     height: 85%;
+     position: relative;
+   }
+   
+   .thumbnail-img{
+     width: 100%;
+     height: 100%;
+     position: absolute;
+     top: 0;
+   }
+   
+   .thumbnail-name{
+     position: absolute;
+     bottom: 0;
+     background-image: linear-gradient(to bottom, rgba(102, 102, 153,0.3), rgba(102, 102, 153,1));
+     width: 100%;
+     color: white;
+     padding: 2px 5px 50px;
+     transition: .5s ease;
+   }
+   
+   .smloverlay h3{
+     background-color: #ff80ff;
+     color: #290066;
+     padding: 15px;
+     border-radius: 5px;
+   }
+   
+   .smloverlay{
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     background-color: rgba(102, 102, 153,0.5);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     color: black;
+     transition: .5s ease;
+     opacity: 0;
+   }
+   
+   .thumbnail-cont:hover .smloverlay{
+     opacity: 1;
+   }
+   
+   .thumbnail-cont:hover .thumbnail-name{
+     padding-bottom: 20px;
+   }
+
+   .button-cont{
+    height: 15%;
+   }
+   
+   .showdetails{
+     display: block;
+     width: 100%;
+     height: 100%;
+     font-size: 1.25rem;
+     font-weight: bold;
+     border: none;
+     background-color: green;
+     color: white;
+   }
+   
+   .showdetails:hover{
+     background-color: lightgreen;
+     color: black;
+   }
+
+

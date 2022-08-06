@@ -1,11 +1,11 @@
 import React from 'react'
 import "./App.css"
-import AllProjects from './Components/AllProjects/AllProjects'
+import MainGrid from './Components/MainGrid/MainGrid'
 const App = () => {
 
   return (
     <div className="container">
-      <AllProjects />
+      <MainGrid />
     </div>
   )
 }

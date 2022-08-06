@@ -1,9 +1,18 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import "./OneProject.css"
+import Thumbnail from "../Thumbnail/Thumbnail"
+import Overlay from "../Overlay/Overlay"
+import {v4} from 'uuid'
 
-const OneProject = ({title, repo, desc, depl, img}) => {
+const OneProject = ({title, repo, desc, depl, img, lang}) => {
 
   const [displayStatus, setDisplayStatus] = useState("none");
+  const [langArr, setLangArr] = useState([]);
+
+  useEffect(() => {
+    setLangArr(lang.map(l => l));
+  }, [lang])
+  
 
   const displayBlock = () => {
     setDisplayStatus("block")
@@ -16,29 +25,20 @@ const OneProject = ({title, repo, desc, depl, img}) => {
   const displayChange = {
     display: displayStatus
   }
+
   return (
     <>
-    <div className="thumbnail">
-        <div className="project-name"><h4>{title}</h4></div>
-        <img src={img} alt={title} />
-        <button className="showdetails" onClick={displayBlock}>Show Details</button>
-    </div>
-    <div className="overlay" style={displayChange}>
-        <div className="fullinfo">
-        <div className="fullproject-name"><h3>{title}</h3></div>
-            <div className="half">
-                <img src={img} alt={title} />
-                <button className="hidedetails" onClick={displayNone}>Hide Details</button>
-            </div>
-            <div className="half">
-              <div className="description"><p>{desc}</p></div>
-              <div className="links">
-                <a className="link" href={repo}>Repository</a>
-                <a className="link" href={depl}>Deployment</a>
-              </div>
-            </div>
-        </div>
-    </div>
+    <Thumbnail key={v4()} img={img} title={title} displayBlock={displayBlock} depl={depl}/>
+    <Overlay 
+        key={v4()}
+        img={img} 
+        title={title} 
+        desc={desc} 
+        displayNone={displayNone} 
+        langArr={langArr} 
+        repo={repo} 
+        depl={depl} 
+        displayChange={displayChange} />
     </>
   )
 }

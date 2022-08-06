@@ -1,9 +1,6 @@
 *, *::before, *::after{
     box-sizing: border-box;
-}
-
-body{
-    margin: auto;
+    margin: 0;
 }
 
 .container{

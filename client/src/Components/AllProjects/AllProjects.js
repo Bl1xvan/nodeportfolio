@@ -7,7 +7,7 @@ const AllProjects = () => {
   const [backendData, setBackendData] = useState([{}])
 
   useEffect(() => {
-    fetch("/api/v1/projects").then(
+    fetch("/api/v1/projects?p=0").then(
       response => response.json()
     ).then(
       data => setBackendData(data)
@@ -19,7 +19,7 @@ const AllProjects = () => {
         <p>Loading...</p>
       ) : (
         backendData.projects.map((project) => {
-          const {title, repository, description, _id, deployment, image} = project;
+          const {title, repository, description, _id, deployment, image, languages} = project;
           return (
                   <OneProject 
                       key={_id} 
@@ -28,6 +28,7 @@ const AllProjects = () => {
                       desc={description} 
                       depl={deployment}
                       img={image}
+                      lang={languages}
                       />
                       
                   )

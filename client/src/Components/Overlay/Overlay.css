@@ -1,0 +1,96 @@
+.overlay{
+    background-color: rgba(128, 128, 128, 0.507);
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.fullinfo{
+    background-color: rgb(234, 189, 251);
+    padding: 2em;
+}
+
+.fullproject-name{
+    grid-column: 1 / span 2;
+    text-align: center;
+}
+
+.half{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.links{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 1em;
+    font-weight: bold;
+}
+.half img{
+    display: inline-block;
+    width: 100%;
+}
+
+.description{
+    padding: 15px;
+    text-align: justify;
+}
+
+.link{
+    display: block;
+    background-color: white;
+    color: black;
+    padding: 5px 20px;
+    margin: 5px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.link:hover{
+    background-color:rgb(189, 251, 226);
+}
+
+.language{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(75px, 1fr));
+}
+
+@media screen and (max-width: 725px){
+    .fullinfo{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+    }
+
+}
+
+@media screen and (min-width: 726px){
+
+    .fullinfo{
+        display: grid;
+        grid-gap: 1em;
+        grid-template-columns: 1fr 1fr;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80vw;
+        max-width: 800px;
+    }
+
+    .links{
+        position: absolute;
+        bottom: 0;
+    }
+
+}
