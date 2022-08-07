@@ -1,0 +1,19 @@
+.pagecont{
+    height: 10%;
+    display: flex;
+    justify-content: center;
+}
+
+.pagecont button {
+    border-radius: 50%;
+    width: 75px;
+    height: 100%;
+    border: none;
+    font-size: 1em;
+    font-weight: bold;
+    background-color: rgb(170, 255, 227);
+}
+
+.pagecont button:hover{
+    background-color: aquamarine;
+}

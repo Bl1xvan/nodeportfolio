@@ -1,9 +1,15 @@
+
+
 .maingrid{
     display: flex;
     flex-direction: row;
     width: 70vw;
-    height: 100vh;
-    margin-left: auto;
+    height: 100%;
+    margin: auto;
+}
+
+.middlecont{
+    width: 100%;
 }
 
 .pgbtncont{

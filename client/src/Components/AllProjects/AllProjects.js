@@ -1,18 +1,9 @@
-import React, {useEffect, useState} from 'react'
+import React from 'react'
 import OneProject from '../OneProject/OneProject'
 import "./AllProjects.css"
 
-const AllProjects = () => {
+const AllProjects = ({backendData}) => {
 
-  const [backendData, setBackendData] = useState([{}])
-
-  useEffect(() => {
-    fetch("/api/v1/projects?p=0").then(
-      response => response.json()
-    ).then(
-      data => setBackendData(data)
-    )
-  }, [])
   return (
     <div className="allprojects">
       {(typeof backendData.projects === 'undefined') ? (
