@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react'
 import AllProjects from '../AllProjects/AllProjects'
 import Pagination from '../Pagination/Pagination'
 import './MainGrid.css'
+import {v4} from 'uuid'
 
 const MainGrid = () => {
 
@@ -38,22 +39,20 @@ const MainGrid = () => {
   }
   return (
     <div className="maingrid">
-    <div className="pgbtncont">
+    <div className="pgbtncont" id="previous" >
       <button className="pgbtn"
-              id="previous" 
               onClick={handlePrevious}
-              disabled={page === 1}><i class="material-icons">chevron_left</i>
+              disabled={page === 1}><i className="material-icons">chevron_left</i>
               </button>
     </div>
     <div className="middlecont">
-      <AllProjects backendData={backendData}/>
-      <Pagination pageJump={pageJump} />
+      <AllProjects key={v4()} backendData={backendData}/>
+      <Pagination key={v4()} pageJump={pageJump} page={page} />
     </div>
-    <div className="pgbtncont">
+    <div className="pgbtncont" id="next">
       <button className="pgbtn" 
-              id="next" 
               onClick={handleNext}
-              disabled={backendData.next === "null"}><i class="material-icons">chevron_right</i>
+              disabled={backendData.next === "null"}><i className="material-icons">chevron_right</i>
               </button>
     </div>
   </div>

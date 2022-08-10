@@ -3,8 +3,26 @@
     margin: 0;
 }
 
-.container{
+.container-2{
     height: 100vh;
     width: 100vw;
+    display: grid;
+    position: relative;
+    overflow-x: hidden;
 }
 
+:root{
+    --purple: rgb(195, 161, 255);
+    --darkpurple: rgb(46, 0, 131);
+    --lightblue: rgb(240, 252, 255);
+    --gray: rgb(247, 247, 247);
+    --mediumgray: rgba(102, 102, 153,0.3);
+    --darkgray: rgba(102, 102, 153,1);
+    --white: white;
+}
+
+@media screen and (min-width: 1250px){
+    .container-2{
+        grid-template-columns: 1fr 1.5fr;
+    }
+}
