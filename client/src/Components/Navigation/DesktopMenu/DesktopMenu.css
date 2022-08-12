@@ -1,26 +1,29 @@
+.D-navbar{
+    background-color: rgb(60, 25, 93);
+    width: 100%;
+    z-index: 3;
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+}
+
+.D-navbargrid a{
+  display: inline-block;
+  padding: 15px 10px;
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.D-navbargrid a:hover{
+  background-color: rgb(221, 185, 255);
+  color: rgb(60, 25, 93);
+}
+
   
-    .navbar{
-      display: flex;
-      flex: 1 1 0%;
-      justify-content: flex-end;
-      padding: 0 16px;
-    }
-  
-    .navbargrid{
-      display: grid;
-      grid-gap: 15px;
-      grid-template-columns: 1fr 1fr 1fr;
-      text-align: center;
-    }
-  
-  
-  
-  @media screen and (min-width: 1250px){
-    .navbargrid{
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-    }
-    .navbargrid a:nth-child(2){
+@media screen and (min-width: 1250px){
+    .D-navbargrid a:nth-child(2){
       display: none;
     }
   }

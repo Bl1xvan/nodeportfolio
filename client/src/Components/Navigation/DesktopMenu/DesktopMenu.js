@@ -3,8 +3,8 @@ import './DesktopMenu.css'
 
 const DesktopMenu = () => {
   return (
-    <div className="navbar">
-    <span className="navbargrid">
+    <div className="D-navbar">
+    <span className="D-navbargrid">
         <a href="#welcomediv">
           Welcome
         </a>

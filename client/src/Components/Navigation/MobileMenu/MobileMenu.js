@@ -1,11 +1,18 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './MobileMenu.css'
+import { useSpring, animated } from 'react-spring'
 
 const MobileMenu = () => {
+  const [toggle, setToggle] = useState(false);
+  const styles = useSpring({ position: "relative", top: toggle ? 0 : -500 })
+
+  const toggleDisplay = () =>{
+    setToggle(!toggle)
+  }
   return (
-    <div className="navbar">
-    <span className="togglediv"><button className="togglebtn">Button</button></span>
-    <span className="navbargrid">
+    <div className="M-navbar">
+    <span className="togglediv"><button className="togglebtn" onClick={toggleDisplay}>{toggle? "Hide Menu" : "Show Menu"}</button></span>
+    <animated.span className="M-navbargrid" style={styles}>
         <a href="#welcomediv">
           Welcome
         </a>
@@ -15,7 +22,7 @@ const MobileMenu = () => {
         <a href="#projectsdiv">
           Projects
         </a>
-    </span>
+    </animated.span>
   </div>
   )
 }
