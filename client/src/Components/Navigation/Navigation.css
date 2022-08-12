@@ -1,82 +1,30 @@
-#navbar{
-    position: fixed;
-    width: 100%;
-    z-index: 4;
-  }
-  
-  #navbarlist{
-      margin: 0;
-      padding: 0
-  }
-  
-  .navlistitem > a{
-      display: block;
-      text-align: center;
-      padding: 20px;
-  }
-  
-  .navlistitem{
-    text-decoration: none;
-    font-weight: bold;
-    list-style-type: none;
-  }
-  
-  .navlistitem > a, .social > a{
-    color: var(--darklink);
-    text-decoration: none;
-  }
+:root{
+  --lightergreen: hsl(150, 90%, 75%);
+  --lightgreen: rgb(73, 73, 123);
+  --darkgreen: hsl(150, 80%, 20%);
+  --darkergreen: hsl(150, 30%, 10%);
+  --darklink: black;
+}
 
-  .navlistitem > a:hover{
-    background-color: hsla(20, 90%, 50%, 0.3);
-  }
+.navbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 4;
+}
 
-  @media screen and (min-width: 600px){
-  
-    #navbar{
-    display: flex;
-    justify-content: end;
-  
-  }
-    #navbarlist{
-      display: grid;
-      grid-template-columns: auto auto auto;
-      margin: 15px auto;
-      width: 95%;
-      border-radius: 20px;
-      justify-content: end;
-      background-color: var(--lightgreen);
-      border-style: inset;
-      border-color: var(--darkgreen);
-    }
-    
-  .navlistitem > a[href="#profile"]:hover{
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-  }
+.navbargrid a{
+  text-decoration: none;
+  color: black;
+  display: block;
+  padding: 20px 5px;
+  font-weight: bold;
+}
 
-    
-    a[href="#portfolio"], a[href="#profile"]{
-    border-left: 2px solid var(--darklink);
-  }
-    
-   .item-border{
-        border-right: 3px solid var(--darkgreen);
-      }
+.navbargrid a:hover{
+  background-color: var(--darkgreen);
+  color: white;
+}
 
-  }
-  
-  @media screen and (max-width: 600px){
-    #navbar{
-    display: grid;
-    grid-gap: 10px;
-  }
-    #navbarlist{
-      background-color: var(--lightgreen);
-    }
 
-  
-   a[href="#portfolio"]{
-      border-top: 1px solid var(--darklink);
-      border-bottom: 1px solid var(--darklink);
-    }
-  }

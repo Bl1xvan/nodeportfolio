@@ -1,27 +1,18 @@
 import React from 'react'
 import './Navigation.css'
+import useWindowResize from './hooks/useWindowResize'
+import MobileMenu from '../Navigation/MobileMenu/MobileMenu'
+import DesktopMenu from '../Navigation/DesktopMenu/DesktopMenu'
+
 
 const Navigation = () => {
+
+  const {width} = useWindowResize()
+  
   return (
-    <nav id="navbar">
-    <ul id="navbarlist">
-      <li class="navlistitem item-border">
-        <a href="#welcome">
-          Welcome
-        </a>
-      </li>
-      <li class="navlistitem item-border">
-        <a href="#portfolio">
-          Services
-        </a>
-      </li>
-      <li class="navlistitem">
-        <a href="#profile">
-          Projects
-        </a>
-      </li>
-    </ul>
-  </nav>
+    <>
+      {width < 600 ? <MobileMenu /> : <DesktopMenu /> }
+    </>
   )
 }
 

@@ -47,7 +47,7 @@
 
 @media screen and (min-width: 600px){
     .maingrid{
-        margin: auto;
+        margin-top: auto;
     }
 
     .middlecont{

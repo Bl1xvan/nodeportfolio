@@ -38,7 +38,7 @@ const MainGrid = () => {
     setPage(num)
   }
   return (
-    <div className="maingrid">
+    <div className="maingrid" id="projectsdiv">
     <div className="pgbtncont" id="previous" >
       <button className="pgbtn"
               onClick={handlePrevious}

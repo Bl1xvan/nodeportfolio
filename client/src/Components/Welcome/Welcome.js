@@ -3,7 +3,7 @@ import './Welcome.css'
 
 const Welcome = () => {
   return (
-    <div className="welcome">
+    <div className="welcome" id="welcomediv">
     <div className="header">
       <h1>
           <span className="ltr">W</span>
@@ -16,7 +16,7 @@ const Welcome = () => {
       </h1>
       <div className="subheader">
         <h4>Front-End Developer</h4>
-        <button>Go to projects</button>
+        <a href="#projectsdiv">Go to projects</a>
       </div>
     </div>
   </div>

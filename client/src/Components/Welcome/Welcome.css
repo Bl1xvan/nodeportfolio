@@ -76,6 +76,7 @@
   
   .subheader a{
     margin-top: 15px;
+    background-color:rgba(0, 0, 0, 0);
     display: inline-block;
     color: white;
     text-decoration: none;
@@ -83,4 +84,9 @@
     border: 2px solid #5cffec;
     border-radius: 10px;
     font-size: 1rem;
+  }
+
+  .subheader a:hover{
+    background-color: white;
+    color: black;
   }
