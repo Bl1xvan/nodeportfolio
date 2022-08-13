@@ -1,4 +1,5 @@
 import React from 'react'
+import './Container.css'
 import MainGrid from '../MainGrid/MainGrid'
 import About from '../About/About'
 

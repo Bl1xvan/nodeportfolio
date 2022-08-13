@@ -14,7 +14,7 @@ border-bottom: 1px solid black;
 font-weight: bold;
 background-color: rgb(156, 245, 255);
 text-align: center;
-z-index: 3;
+z-index: 2;
 }
 
 .M-navbargrid a:hover{
@@ -30,7 +30,7 @@ color: white;
     font-size: 1.5em;
     position: relative;
     top: 0;
-    z-index: 5;
+    z-index: 2;
     background-color: rgb(60, 25, 93);
     color: white;
   }

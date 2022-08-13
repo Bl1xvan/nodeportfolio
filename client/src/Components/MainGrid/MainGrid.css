@@ -1,10 +1,13 @@
+#projectsdiv{
+    display: flex;
+    justify-content: center;
+}
+
 .maingrid{
     display: flex;
     flex-direction: row;
-    height: 90vh;
-    width: 100%;
     max-width: 1000px;
-    min-height: 500px;
+    width: 100%;
 }
 
 #previous{
@@ -19,6 +22,7 @@
 
 .pgbtncont{
     margin: auto 0 auto;
+    position: relative;
     z-index: 2;
 }
 
@@ -29,6 +33,7 @@
     padding: 30px;
     border-radius: 50%;
     z-index: 2;
+    position: relative;
 }
 
 .pgbtn:disabled{
@@ -39,19 +44,26 @@
     background-color: rgb(229, 229, 255);
 }
 
-@media screen and (max-width: 599px){
-    .middlecont{
-        width: 60%;
-    }
+.middlecont{
+    width: 100%;
 }
 
-@media screen and (min-width: 600px){
-    .maingrid{
-        margin-top: auto;
+@media screen and (max-width: 649px){
+
+    .showdetails{
+        padding: 10px 0;
     }
 
-    .middlecont{
-        width: 100%;
-        z-index: 1;
+    .maingrid{
+        height: 1050px;
+    }
+
+
+}
+
+@media screen and (min-width: 650px){
+    .maingrid{
+        height: 80vh;
+        margin: auto 0;
     }
 }

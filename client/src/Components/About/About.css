@@ -43,8 +43,13 @@ hr{
 .service-list2 span{
     background-color: rgb(210, 191, 252);
     padding: 10px;
-    font-size: 1.5em;
     font-weight: bold;
     text-align: center;
     border-radius: 10px;
+}
+
+@media screen and (min-width: 650px){
+    .service-list2 span{
+        font-size: 1.5em;
+    }
 }

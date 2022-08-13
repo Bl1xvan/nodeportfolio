@@ -38,24 +38,26 @@ const MainGrid = () => {
     setPage(num)
   }
   return (
-    <div className="maingrid" id="projectsdiv">
-    <div className="pgbtncont" id="previous" >
-      <button className="pgbtn"
-              onClick={handlePrevious}
-              disabled={page === 1}><i className="material-icons">chevron_left</i>
-              </button>
+    <div id="projectsdiv">
+      <div className="maingrid">
+      <div className="pgbtncont" id="previous" >
+        <button className="pgbtn"
+                onClick={handlePrevious}
+                disabled={page === 1}><i className="material-icons">chevron_left</i>
+                </button>
+      </div>
+      <div className="middlecont">
+        <AllProjects key={v4()} backendData={backendData}/>
+        <Pagination key={v4()} pageJump={pageJump} page={page} />
+      </div>
+      <div className="pgbtncont" id="next">
+        <button className="pgbtn" 
+                onClick={handleNext}
+                disabled={backendData.next === "null"}><i className="material-icons">chevron_right</i>
+                </button>
+      </div>
+      </div>
     </div>
-    <div className="middlecont">
-      <AllProjects key={v4()} backendData={backendData}/>
-      <Pagination key={v4()} pageJump={pageJump} page={page} />
-    </div>
-    <div className="pgbtncont" id="next">
-      <button className="pgbtn" 
-              onClick={handleNext}
-              disabled={backendData.next === "null"}><i className="material-icons">chevron_right</i>
-              </button>
-    </div>
-  </div>
   )
 }
 

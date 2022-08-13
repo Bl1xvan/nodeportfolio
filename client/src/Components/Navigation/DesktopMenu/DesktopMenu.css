@@ -1,10 +1,13 @@
 .D-navbar{
-    background-color: rgb(60, 25, 93);
-    width: 100%;
+    background-color: rgb(78, 30, 123);
     z-index: 3;
-    display: flex;
-    justify-content: flex-end;
     position: fixed;
+    left: 0;
+    right: 0;
+}
+
+.D-navbargrid{
+  float: right;
 }
 
 .D-navbargrid a{

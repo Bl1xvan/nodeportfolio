@@ -79,7 +79,7 @@
     height: 50px;
   }
 
-   @media screen and (max-width: 624px){
+   @media screen and (max-width: 649px){
     .thumbnail-name{
       justify-content: flex-end;
       height: 40px;
@@ -88,7 +88,11 @@
       
    }
 
-   @media screen and (min-width: 625px){
+   @media screen and (min-width: 650px){
+    .button-cont{
+      height: 15%;
+    }
+
     .thumbnail-name{
       justify-content: flex-start;
       height: 70px;

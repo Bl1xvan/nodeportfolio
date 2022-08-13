@@ -1,5 +1,5 @@
 
-::-webkit-scrollbar{
+.description::-webkit-scrollbar{
     background: rgb(111, 111, 152);
     width: 10px;
     border-radius: 10px;
@@ -7,7 +7,7 @@
 
 .overlay{
     background-color: rgba(128, 128, 128, 0.507);
-    z-index: 2;
+    z-index: 3;
     position: fixed;
     top: 0;
     left: 0;
@@ -99,7 +99,7 @@
     grid-template-columns: repeat(auto-fill, minmax(75px, 1fr));
 }
 
-@media screen and (max-width: 725px){
+@media screen and (max-width: 925px){
     .fullinfo{
         display: flex;
         flex-direction: column;
@@ -120,12 +120,12 @@
     }
 
     .half img{
-        min-height: 350px;
+        min-height: 250px;
     }
 
 }
 
-@media screen and (min-width: 726px){
+@media screen and (min-width: 926px){
 
     .description{
         height: 250px;
