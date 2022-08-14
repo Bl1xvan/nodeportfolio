@@ -1,0 +1,55 @@
+.about{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 125px;
+}
+
+.about h2{
+    color: rgb(178, 143, 255);
+    font-size: 3em;  
+}
+
+.header-test{
+    position: relative;
+}
+
+hr{
+    position: absolute;
+    bottom: 0;
+    z-index: 0;
+    width: 50vw;
+    border: 2px solid rgb(178, 143, 255);
+}
+
+.service-list1{
+    margin-left: 10px;
+    margin-bottom: 100px;
+}
+
+.service-list1 li{
+    font-size: 2em;
+    color: rgb(178, 143, 255);
+    margin: 15px 0 15px;
+}
+
+.service-list2{
+    display: grid;
+    grid-gap: .5em;
+    grid-template-columns: repeat(auto-fill, minmax(75px, 1fr));
+
+}
+
+.service-list2 span{
+    background-color: rgb(210, 191, 252);
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10px;
+}
+
+@media screen and (min-width: 650px){
+    .service-list2 span{
+        font-size: 1.5em;
+    }
+}

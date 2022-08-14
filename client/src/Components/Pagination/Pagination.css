@@ -1,0 +1,27 @@
+.pgcont{
+    height: 10%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    background-color: rgb(145, 145, 202);
+    padding-right: 15px;
+    border-top: 2px solid white;
+}
+
+.pglabel{
+    display: flex;
+    justify-content: flex-end;
+    padding: 7px;
+    font-size: 1.5em;
+    color: white;
+}
+
+.pglabel h3{
+    margin-right: 15px;
+}
+
+.pgnum{
+    padding: 10px;
+    font-size: 1em;
+    font-weight: bold;
+}
