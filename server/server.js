@@ -9,7 +9,7 @@ app.use(express.json())
 app.use('/api/v1/projects', projects)
 
 
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 const start = async () =>{
     try{
