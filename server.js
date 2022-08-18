@@ -13,6 +13,13 @@ app.use('/api/v1/projects', projects)
 
 const port = process.env.PORT || 5000;
 
+const path = require("path");
+
+
+app.use(express.static(path.join(__dirname, "client", "build")));
+
+
+
 const start = async () =>{
     try{
         await connectDB(process.env.MONGO_URI)
@@ -21,6 +28,10 @@ const start = async () =>{
         console.log(error)
     }
 }
+
+app.get("*", (req, res) => {
+    response.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+  });
 
 start()
 

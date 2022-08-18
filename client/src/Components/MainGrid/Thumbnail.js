@@ -1,18 +1,22 @@
 import React from 'react'
+import "./MainGrid.css"
 import "./Thumbnail.css"
 
 const Thumbnail = ({img, title, displayBlock, depl}) => {
   return (
     
     <div className="main-cont">
+    
     <div className="thumbnail-cont">
       <a href={depl} className="thumbnail-link">
         <img src={img} alt={title} className="thumbnail-img" />
-        <span className="thumbnail-name"><h2>{title}</h2></span>
-        <span className="smloverlay"><h3>Go To Deployment</h3></span>
+        <span className="smloverlay"><h4>Go To Deployment</h4></span>
+        <h2 className="thumbnail-name">{title}</h2>
        </a>
     </div>
-      <div className="button-cont"><button className="showdetails" onClick={displayBlock}>Show Details</button></div>
+      <div className="button-cont">
+        <button className="showdetails" onClick={displayBlock}>Details</button>
+      </div>
     </div>
     
   )

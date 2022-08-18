@@ -1,5 +1,5 @@
 import React from 'react'
-import "./Pagination.css"
+import "./MainGrid.css"
 
 const Pagination = ({pageJump, page}) => {
   return (

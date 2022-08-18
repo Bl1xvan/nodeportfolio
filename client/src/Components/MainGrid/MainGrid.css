@@ -1,69 +1,100 @@
 #projectsdiv{
+    padding-top: 100px;
+}
+
+.port-hdr{
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+    font-size: 3rem;
+    padding-bottom: 30px;
+    color:rgb(43, 16, 151);
 }
 
 .maingrid{
     display: flex;
     flex-direction: row;
-    max-width: 1000px;
-    width: 100%;
+    height: 100%;
+}
+
+.pgbtncont{
+    display: flex;
+    align-items: center;
+    z-index: 2;
 }
 
 #previous{
     position: relative;
-    left: 40px;
+    left: 20px;
 }
 
 #next{
     position: relative;
-    right: 40px;
-}
-
-.pgbtncont{
-    margin: auto 0 auto;
-    position: relative;
-    z-index: 2;
+    right: 20px;
 }
 
 .pgbtn{
-    background-color: white;
-    border: 3px solid rgb(229, 229, 255);
-    color: rgba(102, 102, 153,1);
-    padding: 30px;
+    padding: 35px;
     border-radius: 50%;
-    z-index: 2;
-    position: relative;
+    background-image: linear-gradient(to bottom, white, rgb(241, 241, 255));
+    color:rgb(139, 110, 198);
+    border: 3px solid rgb(139, 110, 198);
+}
+
+.pgbtn:hover{
+    background:rgba(139, 110, 198, .7);
+    color:rgb(241, 241, 255);
 }
 
 .pgbtn:disabled{
     visibility: hidden;
 }
 
-.pgbtn:enabled:hover{
-    background-color: rgb(229, 229, 255);
+.allprojects{
+    min-width: 350px;
+    display: grid;
+    grid-gap: 1.5em;
 }
 
-.middlecont{
+@media screen and (min-width: 700px){
+    .allprojects{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+
+}
+
+.maingrid{
+    width: 90%;
+    margin-left: auto;
+}
+
+#projectsdiv{
+    padding-left: 5em;
+}
+}
+
+img{
+    display: block;
     width: 100%;
+    height: auto;
 }
 
-@media screen and (max-width: 649px){
-
-    .showdetails{
-        padding: 10px 0;
-    }
-
-    .maingrid{
-        height: 1050px;
-    }
-
-
+.pgcont{
+    background-color: rgb(70, 31, 120);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 1.5em;
 }
 
-@media screen and (min-width: 650px){
-    .maingrid{
-        height: 80vh;
-        margin: auto 0;
-    }
+.pglabel{
+    padding-right: 20px;
+    color: white;
+}
+
+.pgnum{
+    width: 100px;
+    padding-left: 10px;
+    font-weight: bolder;
 }

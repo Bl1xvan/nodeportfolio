@@ -1,23 +1,26 @@
 import React from 'react'
 import './About.css'
+import { SiHtml5, SiCss3, SiJavascript, SiNodedotjs, SiReact } from "react-icons/si";
 
 const About = () => {
   return (
     <div className="about" id="aboutdiv">
-      <div className="header-test">
-        <h2>Services</h2>
-        <hr />
+      <div className='info' id="services">
+        <h3>Services</h3>
+        <ul>
+          <li>Portfolios</li>
+          <li>Phone Apps</li>
+        </ul>
       </div>
-      <ul className="service-list1">
-        <li>Portfolios</li>
-        <li>Phone Apps</li>
-      </ul>
-      <div className="service-list2">
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JS</span>
-        <span>React</span>
-        <span>Node</span>
+      <div className='info' id="languages">
+        <h3>Languages</h3>
+        <div className="icons">
+          <div className="badge"><SiHtml5 />HTML</div>
+          <div className="badge"><SiCss3 />CSS</div>
+          <div className="badge"><SiJavascript />JS</div>
+          <div className="badge"><SiReact />React</div>
+          <div className="badge"><SiNodedotjs />Node</div>
+        </div>
       </div>
     </div>
   )
