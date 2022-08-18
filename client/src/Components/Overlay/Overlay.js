@@ -1,5 +1,5 @@
 import React from 'react'
-import Languages from "../Languages/Languages"
+import Languages from "./Languages"
 import "./Overlay.css"
 import {v4} from 'uuid'
 

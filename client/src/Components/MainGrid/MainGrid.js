@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
-import AllProjects from '../AllProjects/AllProjects'
-import Pagination from '../Pagination/Pagination'
+import AllProjects from './AllProjects'
+import Pagination from './Pagination'
 import './MainGrid.css'
 import {v4} from 'uuid'
 
@@ -47,6 +47,7 @@ const MainGrid = () => {
                 </button>
       </div>
       <div className="middlecont">
+      <div className="port-hdr"><h2>Projects</h2></div>
         <AllProjects key={v4()} backendData={backendData}/>
         <Pagination key={v4()} pageJump={pageJump} page={page} />
       </div>

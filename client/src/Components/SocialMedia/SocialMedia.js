@@ -7,10 +7,10 @@ const SocialMedia = () => {
   return (
     <IconContext.Provider value={{color: "white", size: "1em" }}>
     <span className="fa-icons">
-      <a href="#"><FaGithub /></a>
-      <a href="#"><FaEnvelope /></a>
-      <a href="#"><FaLinkedinIn /></a>
-      <a href="#"><FaTwitter /></a>
+      <a href="tvtropes.org"><FaGithub /></a>
+      <a href="tvtropes.org"><FaEnvelope /></a>
+      <a href="tvtropes.org"><FaLinkedinIn /></a>
+      <a href="tvtropes.org"><FaTwitter /></a>
     </span>
    </IconContext.Provider>
   )

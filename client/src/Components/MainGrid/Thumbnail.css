@@ -1,0 +1,63 @@
+
+.thumbnail-cont{
+    border: 1px solid rgb(216, 216, 216);
+}
+.thumbnail-name{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(36, 0, 109, 0.781), rgba(36, 0, 109, 0.393));
+    color:rgb(184, 236, 255);
+    padding-left: 10px;
+    padding-bottom: 10px;
+    transition: 0.3s ease-in;
+}
+
+.thumbnail-link{
+    position: relative;
+}
+
+.thumbnail-cont:hover .smloverlay{
+    opacity: 1;
+}
+
+.thumbnail-cont:hover .thumbnail-name{
+    padding-bottom: 30px;
+}
+
+
+.smloverlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(36, 0, 109, 0.661), rgba(36, 0, 109, 0.262));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.3s ease-in;
+}
+
+.smloverlay h4{
+    color: black;
+    background-color:rgb(255, 135, 239);
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.showdetails{
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+    width: 100%;
+    background-color:rgb(36, 0, 109);
+    color:rgb(184, 236, 255);
+}
+
+.showdetails:hover{
+    background-color:rgb(196, 166, 255);
+    color: rgb(36, 0, 109);
+}

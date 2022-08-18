@@ -1,6 +1,6 @@
 import React from 'react'
-import OneProject from '../OneProject/OneProject'
-import "./AllProjects.css"
+import OneProject from './OneProject'
+import "./MainGrid.css"
 
 const AllProjects = ({backendData}) => {
 

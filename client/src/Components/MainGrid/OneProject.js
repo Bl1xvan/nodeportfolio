@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
-import "./OneProject.css"
-import Thumbnail from "../Thumbnail/Thumbnail"
+import "./MainGrid.css"
+import Thumbnail from "./Thumbnail"
 import Overlay from "../Overlay/Overlay"
 import {v4} from 'uuid'
 

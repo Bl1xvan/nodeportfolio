@@ -1,55 +1,63 @@
 .about{
     display: flex;
     flex-direction: column;
+}
+
+.info{
+    padding-top: 100px;
+    padding-left: 6em;
+    padding-right: 3em;
+    padding-bottom: 100px;
+}
+
+.info h3{
+    font-size: 3rem;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+}
+
+#services h3{
+    border-bottom: 2px solid white;
+}
+
+#languages h3{
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: 2px solid black;
+}
+
+.badge{
+    color:rgb(103, 75, 160);
+    border: 2px solid rgb(139, 110, 198);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    padding: 125px;
+    align-items: center;
+    font-size: 2rem;
+    
+    
 }
 
-.about h2{
-    color: rgb(178, 143, 255);
-    font-size: 3em;  
-}
-
-.header-test{
-    position: relative;
-}
-
-hr{
-    position: absolute;
-    bottom: 0;
-    z-index: 0;
-    width: 50vw;
-    border: 2px solid rgb(178, 143, 255);
-}
-
-.service-list1{
-    margin-left: 10px;
-    margin-bottom: 100px;
-}
-
-.service-list1 li{
-    font-size: 2em;
-    color: rgb(178, 143, 255);
-    margin: 15px 0 15px;
-}
-
-.service-list2{
+.icons{
     display: grid;
-    grid-gap: .5em;
-    grid-template-columns: repeat(auto-fill, minmax(75px, 1fr));
-
+    width: 100%;
+    align-content: space-around;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    grid-gap: 4em;
+    height: 100%;
 }
 
-.service-list2 span{
-    background-color: rgb(210, 191, 252);
-    padding: 10px;
+#services > ul{
+    display: grid;
+    grid-row-gap: 1em;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    font-size: 1.5rem; 
     font-weight: bold;
-    text-align: center;
-    border-radius: 10px;
 }
 
-@media screen and (min-width: 650px){
-    .service-list2 span{
-        font-size: 1.5em;
-    }
+#services{
+    background-color: black;
+    color: white;
 }
