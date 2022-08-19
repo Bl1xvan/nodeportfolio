@@ -1,8 +1,9 @@
+require('dotenv').config();
 const express = require('express');
 const app = express();
 const projects = require('./routes/projects');
 const connectDB = require('./db/connect');
-require('dotenv').config();
+
 
 
 app.use(express.static('./public'));
