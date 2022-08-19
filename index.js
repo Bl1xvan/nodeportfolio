@@ -16,7 +16,6 @@ const port = process.env.PORT || 5000;
 const path = require("path");
 
 
-app.use(express.static(path.join(__dirname, "client", "build")));
 
 
 
@@ -28,6 +27,9 @@ const start = async () =>{
         console.log(error)
     }
 }
+
+
+app.use(express.static(path.join(__dirname, "client", "build")));
 
 app.get("*", (req, res) => {
     response.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
