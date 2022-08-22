@@ -7,14 +7,14 @@ const About = () => {
     <div className="about" id="aboutdiv">
       <div className='info' id="services">
         <h3>Services</h3>
-        <ul>
-          <li>Portfolios</li>
-          <li>Phone Apps</li>
-        </ul>
+        <div className="info-grid">
+          <div>Portfolios</div>
+          <div>Phone Apps</div>
+        </div>
       </div>
       <div className='info' id="languages">
         <h3>Languages</h3>
-        <div className="icons">
+        <div className="info-grid">
           <div className="badge"><SiHtml5 />HTML</div>
           <div className="badge"><SiCss3 />CSS</div>
           <div className="badge"><SiJavascript />JS</div>

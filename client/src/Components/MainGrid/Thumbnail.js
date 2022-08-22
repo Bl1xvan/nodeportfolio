@@ -2,14 +2,13 @@ import React from 'react'
 import "./MainGrid.css"
 import "./Thumbnail.css"
 
-const Thumbnail = ({img, title, displayBlock, depl}) => {
+const Thumbnail = ({title, displayBlock, depl}) => {
   return (
     
     <div className="main-cont">
     
     <div className="thumbnail-cont">
       <a href={depl} className="thumbnail-link">
-        <img src={img} alt={title} className="thumbnail-img" />
         <span className="smloverlay"><h4>Go To Deployment</h4></span>
         <h2 className="thumbnail-name">{title}</h2>
        </a>

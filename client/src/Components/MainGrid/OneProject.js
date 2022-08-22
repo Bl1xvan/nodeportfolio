@@ -28,7 +28,7 @@ const OneProject = ({title, repo, desc, depl, img, lang}) => {
 
   return (
     <>
-    <Thumbnail key={v4()} img={img} title={title} displayBlock={displayBlock} depl={depl}/>
+    <Thumbnail key={v4()} title={title} displayBlock={displayBlock} depl={depl}/>
     <Overlay 
         key={v4()}
         img={img} 

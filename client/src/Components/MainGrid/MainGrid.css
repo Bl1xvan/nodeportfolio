@@ -1,0 +1,21 @@
+#projectsdiv{
+    background-color:aquamarine;
+}
+
+.maingrid{
+    background-color: pink;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.middlecont{
+    width: 100%;
+}
+
+.allprojects{
+    display: grid;
+    gap: .7em;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
