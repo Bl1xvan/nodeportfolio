@@ -8,7 +8,7 @@ const SocialMedia = () => {
     <IconContext.Provider value={{color: "white", size: "1em" }}>
     <span className="fa-icons">
       <a href="https://github.com/Bl1xvan"><FaGithub /></a>
-      <a href="mailto:pittterpatter12@gmail.com"><FaEnvelope /></a>
+      <a href="mailto:cflaviendev@gmail.com"><FaEnvelope /></a>
       <a href="https://www.linkedin.com/in/christeen-flavien1/"><FaLinkedinIn /></a>
       <a href="twitter.com/Delila83803959"><FaTwitter /></a>
     </span>
