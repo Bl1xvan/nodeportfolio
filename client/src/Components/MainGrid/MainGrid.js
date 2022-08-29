@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import AllProjects from './AllProjects'
 import Pagination from './Pagination'
+import {IoMdArrowDropleft, IoMdArrowDropright} from "react-icons/io";
 import './MainGrid.css'
 import {v4} from 'uuid'
 
@@ -43,7 +44,7 @@ const MainGrid = () => {
       <div className="pgbtncont" id="previous" >
         <button className="pgbtn"
                 onClick={handlePrevious}
-                disabled={page === 1}><i className="material-icons">chevron_left</i>
+                disabled={page === 1}><IoMdArrowDropleft />
                 </button>
       </div>
       <div className="middlecont">
@@ -54,7 +55,7 @@ const MainGrid = () => {
       <div className="pgbtncont" id="next">
         <button className="pgbtn" 
                 onClick={handleNext}
-                disabled={backendData.next === "null"}><i className="material-icons">chevron_right</i>
+                disabled={backendData.next === "null"}><IoMdArrowDropright />
                 </button>
       </div>
       </div>

@@ -1,13 +1,33 @@
-*, *::after, *::before{
-    box-sizing: border-box;
-    margin: 0;
+*, *::before, *::after{
+    box-sizing: border-box;  
     
 }
 
+body{
+    margin: 0;
+}
 
 .maindiv{
     height: 100vh;
     max-width: 1500px;
 }
+
+
+.info, .maingrid{
+    width: 95%;
+}
+
+#aboutdiv, #projectsdiv{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.info, .info-grid, .main-cont, .badge{
+    border-radius: 15px;
+}
+
 
 

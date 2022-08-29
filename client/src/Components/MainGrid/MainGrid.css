@@ -1,9 +1,4 @@
-#projectsdiv{
-    background-color:aquamarine;
-}
-
 .maingrid{
-    background-color: pink;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -17,5 +12,58 @@
 .allprojects{
     display: grid;
     gap: .7em;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    background-color: rgb(220, 220, 220);
+    padding: 25px;
+    border-radius: 15px;
+}
+
+.port-hdr h2{
+    font-size: 3.5em;
+}
+
+.pgcont{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: flex-end;
+}
+
+.pgbtn{
+    padding: 25px 20px;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    border: none;
+}
+
+.pglabel{
+    font-size: 1.5em;
+}
+.pgnum{
+    width: 100px;
+    padding: 10px 0;
+    margin-left: 10px;
+}
+
+@media screen and (max-width: 799px){
+    .allprojects{
+        width: 70%;
+        min-width: 350px;
+        margin: auto
+    }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+    .allprojects{
+        width: 95%;
+        margin: auto;
+        max-width: 770px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    .allprojects{
+        grid-template-columns: repeat(4, 1fr);
+    }
 }

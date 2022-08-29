@@ -1,4 +1,40 @@
 .main-cont{
-    background-color: aqua;
+    background-color: rgb(185, 185, 185);
     aspect-ratio: 1;
+    display: grid;
+    grid-template-rows: 1fr auto;
 }
+
+.thumbnail-link:hover .smloverlay{
+    opacity: 1;
+}
+
+.showdetails{
+    width: 100%;
+    border-bottom: none;
+    border-right: none;
+    border-left: none;
+    background-color: transparent;
+    font-size: 1.25em;
+    padding: 15px 0;
+}
+
+.thumbnail-link, .button-cont{
+    text-align: center;
+}
+
+.thumbnail-link{
+    text-decoration: none;
+    color: black;
+    display: block;
+    position: relative;
+}
+
+.smloverlay{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
