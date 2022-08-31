@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import './MobileMenu.css'
+import SocialMedia from '../SocialMedia'
 import { useSpring, animated } from 'react-spring'
 
 const MobileMenu = () => {
@@ -11,7 +12,12 @@ const MobileMenu = () => {
   }
   return (
     <div className="M-navbar">
-    <span className="togglediv"><button className="togglebtn" onClick={toggleDisplay}>{toggle? "Hide Menu" : "Show Menu"}</button></span>
+    <div className="menu">
+      <span className="mobile-icons"><SocialMedia /></span>
+      <button className="togglebtn" onClick={toggleDisplay}>
+        {toggle? "Hide Menu" : "Show Menu"}
+      </button>
+    </div>
     <animated.span className="M-navbargrid" style={styles}>
         <a href="#welcomediv">
           Welcome

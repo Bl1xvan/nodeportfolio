@@ -9,12 +9,16 @@ const getAllProjectsStatic = asyncWrapper(async (req, res) => {
 
 })
 
-const getAllProjects = asyncWrapper(async(req, res) => {
-    const {title} = req.query
+const getAllProjects = asyncWrapper(async (req, res) => {
+    const {title, languages} = req.query
     const queryObject = {}
 
+    if(languages){
+        queryObject.languages = languages
+    }
+
     if(title){
-        queryObject.title = {$regex: title, option: 'i'}
+        queryObject.title = {$regex: title, $options: 'i'};
     }
 
     let result = Project.find(queryObject)
@@ -26,8 +30,8 @@ const getAllProjects = asyncWrapper(async(req, res) => {
     result.skip(skip).limit(limit)
 
     const projects = await result
-    
-    res.status(200).json({projects})
+
+    res.status(200).json({projects, page})
 })
 
 

@@ -10,6 +10,7 @@ body{
 .maindiv{
     height: 100vh;
     max-width: 1500px;
+    position: relative;
 }
 
 
@@ -23,6 +24,10 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+#projectsdiv{
+    position: relative;
 }
 
 .info, .info-grid, .main-cont, .badge{

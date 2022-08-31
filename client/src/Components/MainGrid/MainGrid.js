@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import AllProjects from './AllProjects'
 import Pagination from './Pagination'
+import ToggleDiv from './ToggleDiv'
 import {IoMdArrowDropleft, IoMdArrowDropright} from "react-icons/io";
 import './MainGrid.css'
 import {v4} from 'uuid'
@@ -30,7 +31,7 @@ const MainGrid = () => {
 
   const handleNext = () => {
     setPage((p) => {
-      if(backendData.next === "not null") return p + 1;
+       return p + 1;
     })
     console.log(page)
   }
@@ -41,22 +42,25 @@ const MainGrid = () => {
   return (
     <div id="projectsdiv">
       <div className="maingrid">
-      <div className="pgbtncont" id="previous" >
-        <button className="pgbtn"
+      <ToggleDiv />
+      
+      <div className="middlecont">
+      <div className="port-hdr"><h2>Projects</h2></div>
+      <Pagination key={v4()} pageJump={pageJump} page={page} />
+        <AllProjects key={v4()} backendData={backendData}/>
+        <div className="pgbtnpair">
+                <button className="pgbtn"
                 onClick={handlePrevious}
                 disabled={page === 1}><IoMdArrowDropleft />
                 </button>
-      </div>
-      <div className="middlecont">
-      <div className="port-hdr"><h2>Projects</h2></div>
-        <AllProjects key={v4()} backendData={backendData}/>
-        <Pagination key={v4()} pageJump={pageJump} page={page} />
-      </div>
-      <div className="pgbtncont" id="next">
-        <button className="pgbtn" 
+
+                <button className="pgbtn" 
                 onClick={handleNext}
                 disabled={backendData.next === "null"}><IoMdArrowDropright />
                 </button>
+
+        </div>
+        
       </div>
       </div>
     </div>
