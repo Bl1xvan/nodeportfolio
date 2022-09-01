@@ -1,6 +1,6 @@
 import React from 'react'
 import './Navigation.css'
-import useWindowResize from './hooks/useWindowResize'
+import useWindowResize from '../hooks/useWindowResize'
 import MobileMenu from '../Navigation/MobileMenu/MobileMenu'
 import DesktopMenu from '../Navigation/DesktopMenu/DesktopMenu'
 

@@ -4,19 +4,18 @@
     position: fixed;
     left: 0;
     right: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.D-navbargrid{
-  float: right;
-}
-
-.D-navbargrid a{
+.D-navbargrid a, .desktop-icons a{
   display: inline-block;
-  padding: 15px 10px;
-  margin: 0 15px;
   color: white;
   text-decoration: none;
   font-weight: bold;
+  padding: 10px 20px;
 }
 
 .D-navbargrid a:hover{

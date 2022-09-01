@@ -14,20 +14,20 @@ body{
 }
 
 
-.info, .maingrid{
+.info{
     width: 95%;
+    margin: 0 auto;
 }
 
 #aboutdiv, #projectsdiv{
     min-height: 100vh;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    
 }
 
-#projectsdiv{
-    position: relative;
+#aboutdiv{
+    flex-direction: column;
+    justify-content: center;
 }
 
 .info, .info-grid, .main-cont, .badge{
