@@ -11,6 +11,11 @@ const MainGrid = () => {
   const [backendData, setBackendData] = useState([{}])
   const [page, setPage] = useState(1)
   const [toggle, setToggle] = useState(false);
+  const [checkBox, setCheckBox] = useState([
+    {id: v4(), checked: false, name: "React.js"}, 
+    {id: v4(), checked: false, name: "JS"}, 
+    {id: v4(), checked: false, name: "CSS"}, 
+    {id: v4(), checked: false, name: "HTML"}])
 
   useEffect(() => {
     fetch(`/api/v1/projects?p=${page}`).then(
@@ -44,9 +49,21 @@ const MainGrid = () => {
     setToggle(!toggle)
 }
 
+const handleCheckBox = (id) => {
+  setCheckBox((prev) => {
+    return prev.map((item) => {
+      if(item.id === id){
+        return {...item, checked: !item.checked}
+      }else{
+        return {...item}
+      }
+    })
+  })
+  console.log(checkBox.map(item => item.checked))
+}
   return (
     <div id="projectsdiv">
-      <ToggleDiv toggle={toggle} toggleDisplay={toggleDisplay} />
+      <ToggleDiv toggle={toggle} toggleDisplay={toggleDisplay} checkBox={checkBox} handleCheckBox={handleCheckBox} />
       <div className="maingrid">
       <div className="middlecont">
       <div className="port-hdr"><h2>Projects</h2></div>

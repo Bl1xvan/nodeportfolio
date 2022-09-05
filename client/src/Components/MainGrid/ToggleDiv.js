@@ -3,7 +3,7 @@ import SearchBar from './SearchBar'
 import Tags from './Tags'
 import { useSpring, animated } from 'react-spring'
 
-const ToggleDiv = ({toggle, toggleDisplay}) => {
+const ToggleDiv = ({toggle, toggleDisplay, checkBox, handleCheckBox}) => {
     const styles = useSpring({position: "absolute", zIndex: 3, left: toggle ? 0 : -1000 })
   
 
@@ -11,7 +11,7 @@ const ToggleDiv = ({toggle, toggleDisplay}) => {
     <animated.div style={styles} className="togglediv">
     <div className="filter-controls">
       <SearchBar />
-      <Tags />
+      <Tags checkBox={checkBox} handleCheckBox={handleCheckBox} />
     </div>
     <div className="toggle-controls" onClick={toggleDisplay}>
     <h3>Hide Filters</h3>
