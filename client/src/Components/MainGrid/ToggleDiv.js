@@ -4,7 +4,7 @@ import Tags from './Tags'
 import { useSpring, animated } from 'react-spring'
 
 const ToggleDiv = ({toggle, toggleDisplay}) => {
-    const styles = useSpring({position: "absolute", zIndex: 3, left: toggle ? 0 : -400 })
+    const styles = useSpring({position: "absolute", zIndex: 3, left: toggle ? 0 : -1000 })
   
 
   return (

@@ -21,7 +21,6 @@ const MainGrid = () => {
   }, [page])
 
 
-
   const handlePrevious = () => {
     
     setPage((p) => {
@@ -44,9 +43,10 @@ const MainGrid = () => {
   const toggleDisplay = () =>{
     setToggle(!toggle)
 }
+
   return (
     <div id="projectsdiv">
-      <ToggleDiv toggle={toggle} toggleDisplay={toggleDisplay}/>
+      <ToggleDiv toggle={toggle} toggleDisplay={toggleDisplay} />
       <div className="maingrid">
       <div className="middlecont">
       <div className="port-hdr"><h2>Projects</h2></div>
