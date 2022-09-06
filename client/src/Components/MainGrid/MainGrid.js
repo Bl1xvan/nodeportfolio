@@ -16,7 +16,30 @@ const MainGrid = () => {
     {id: v4(), checked: false, name: "JS"}, 
     {id: v4(), checked: false, name: "CSS"}, 
     {id: v4(), checked: false, name: "HTML"}])
-  const [langValue, setLangValue] = useState("")
+
+    let langValue = ""
+
+    const handleCheckBox = (id) => {
+      setCheckBox((prev) => {
+        return prev.map((item) => {
+          if(item.id === id){
+            return {...item, checked: !item.checked}
+          }else{
+            return {...item}
+          }
+        })
+      })
+    }
+  
+
+  const renderFilters = () => {
+    const filterCheckBox = checkBox.filter(item => item.checked === true)
+    const filterMap = filterCheckBox.map(item => item.name);
+    return filterMap.join('&')  
+  }
+  
+  langValue = renderFilters()
+
   useEffect(() => {
     fetch(`/api/v1/projects?p=${page}&languages=${langValue}`).then(
       response => response.json()
@@ -48,20 +71,7 @@ const MainGrid = () => {
     setToggle(!toggle)
 }
 
-const handleCheckBox = (id) => {
-  setCheckBox((prev) => {
-    return prev.map((item) => {
-      if(item.id === id){
-        return {...item, checked: !item.checked}
-      }else{
-        return {...item}
-      }
-    })
-  })
-  const filterCheckBox = checkBox.filter(item => item.checked === true)
-  const filterMap = filterCheckBox.map(item => item.name);
-  setLangValue(filterMap.join('&'))
-}
+
 
 
   return (
