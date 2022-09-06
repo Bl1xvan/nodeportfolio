@@ -16,14 +16,14 @@ const MainGrid = () => {
     {id: v4(), checked: false, name: "JS"}, 
     {id: v4(), checked: false, name: "CSS"}, 
     {id: v4(), checked: false, name: "HTML"}])
-
+  const [langValue, setLangValue] = useState("")
   useEffect(() => {
-    fetch(`/api/v1/projects?p=${page}`).then(
+    fetch(`/api/v1/projects?p=${page}&languages=${langValue}`).then(
       response => response.json()
     ).then(
       data => setBackendData(data)
     )
-  }, [page])
+  }, [page, langValue])
 
 
   const handlePrevious = () => {
@@ -38,7 +38,6 @@ const MainGrid = () => {
     setPage((p) => {
        return p + 1;
     })
-    console.log(page)
   }
 
   const pageJump = (num) => {
@@ -59,14 +58,19 @@ const handleCheckBox = (id) => {
       }
     })
   })
-  console.log(checkBox.map(item => item.checked))
+  const filterCheckBox = checkBox.filter(item => item.checked === true)
+  const filterMap = filterCheckBox.map(item => item.name);
+  setLangValue(filterMap.join('&'))
 }
+
+
   return (
     <div id="projectsdiv">
       <ToggleDiv toggle={toggle} toggleDisplay={toggleDisplay} checkBox={checkBox} handleCheckBox={handleCheckBox} />
       <div className="maingrid">
       <div className="middlecont">
-      <div className="port-hdr"><h2>Projects</h2></div>
+      <div className="port-hdr"><h2>Projects</h2>
+      </div>
       <Pagination key={v4()} pageJump={pageJump} page={page} toggleDisplay={toggleDisplay}/>
       <AllProjects key={v4()} backendData={backendData}/>
       <PgBtnPair handlePrevious={handlePrevious} handleNext={handleNext} page={page} backendData={backendData} /> 
