@@ -18,7 +18,7 @@ app.use('/api/v1/projects', projects)
 app.use(notFound)
 app.use(errorHandlerMiddleware)
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 8000;
 
 const path = require("path");
 
