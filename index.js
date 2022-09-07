@@ -18,7 +18,7 @@ app.use('/api/v1/projects', projects)
 app.use(notFound)
 app.use(errorHandlerMiddleware)
 
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 5000;
 
 const path = require("path");
 
@@ -39,7 +39,7 @@ const start = async () =>{
 app.use(express.static(path.join(__dirname, "client", "build")));
 
 app.get("*", (req, res) => {
-    response.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
   });
 
 start()
