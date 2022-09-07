@@ -24,13 +24,15 @@ const getAllProjects = asyncWrapper(async (req, res) => {
     let result = Project.find(queryObject)
 
     const page = Number(req.query.p) || 1
-    const limit = Number(req.query.limit) || 4
+    const limit = 4
     const skip = (page - 1) * limit
-
     result.skip(skip).limit(limit)
 
+
+    
     const projects = await result
 
+    
     res.status(200).json({projects, page})
 })
 
