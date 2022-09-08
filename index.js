@@ -23,9 +23,6 @@ const port = process.env.PORT || 5000;
 const path = require("path");
 
 
-
-
-
 const start = async () =>{
     try{
         await connectDB(process.env.MONGO_URI)
