@@ -39,14 +39,15 @@ const MainGrid = () => {
   }
   
   langValue = renderFilters()
-
+  console.log(langValue);
+  
   useEffect(() => {
-    fetch(`/api/v1/projects?p=${page}&languages=${langValue}`).then(
+    fetch(`/api/v1/projects?p=${page}`).then(
       response => response.json()
     ).then(
       data => setBackendData(data)
     )
-  }, [page, langValue])
+  }, [page])
 
 
   const handlePrevious = () => {
