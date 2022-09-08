@@ -4,8 +4,8 @@ const asyncWrapper = require('../middleware/async')
 
 const getAllProjectsStatic = asyncWrapper(async (req, res) => {
 
-        const projects = await Project.find({})
-        res.status(200).json({projects})
+        const projectsStatic = await Project.find({})
+        res.status(200).json({projectsStatic})
 
 })
 
