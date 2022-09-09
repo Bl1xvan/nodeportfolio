@@ -6,9 +6,6 @@ const connectDB = require('./db/connect');
 const notFound = require('./middleware/not-found');
 const errorHandlerMiddleware = require('./middleware/error-handler');
 
-
-
-
 app.use(express.static('./public'));
 
 app.use(express.json())

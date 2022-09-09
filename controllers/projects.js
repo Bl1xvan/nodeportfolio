@@ -4,36 +4,46 @@ const asyncWrapper = require('../middleware/async')
 
 const getAllProjectsStatic = asyncWrapper(async (req, res) => {
 
-        const projectsStatic = await Project.find({})
-        res.status(200).json({projectsStatic})
+        const projects = await Project.find({})
+        res.status(200).json({projects})
 
 })
 
 const getAllProjects = asyncWrapper(async (req, res) => {
-    const {title, languages} = req.query
-    const queryObject = {}
+   
+    const page = parseInt(req.query.p) - 1 || 0;
+	const limit = 4;
+    let language = req.query.languages || "All"
+    let search = req.query.title || ""
+    const languageOptions = [
+        "React.js",
+        "JS",
+        "CSS",
+        "HTML"
+    ]
+    language === "All" ? (language = [...languageOptions]) : (language = req.query.languages.split('&'))
 
-    if(languages){
-        queryObject.languages = languages
-    }
-
-    if(title){
-        queryObject.title = {$regex: title, $options: 'i'};
-    }
-
-    let result = Project.find(queryObject)
-
-    const page = Number(req.query.p) || 1
-    const limit = 4
-    const skip = (page - 1) * limit
-    result.skip(skip).limit(limit)
-
-
+   
+    const projects = await Project.find({title: {$regex: search, $options: "i"}}).where("languages").in([...language]).skip(page * limit).limit(limit)
     
-    const projects = await result
+    const total = await Project.find({title: {$regex: search, $options: "i"}}).where("languages").in([...language]).countDocuments({
+        language: { $in: [...language] },
+        title: { $regex: search, $options: "i" },
+    });
 
-    
-    res.status(200).json({projects, page})
+    const pageCount = Math.ceil(total / limit)
+    const next = pageCount == page + 1 ? "null" : "not null"
+
+    const response = {
+        error: false,
+        total,
+        next, 
+        p: page + 1,
+        limit,
+        languages: languageOptions,
+        projects,
+    };
+    res.status(200).json(response);
 })
 
 
