@@ -11,13 +11,13 @@ const MainGrid = () => {
   const [backendData, setBackendData] = useState([{}])
   const [page, setPage] = useState(1)
   const [toggle, setToggle] = useState(false);
+  const [langValue, setLangValue] = useState("All")
   const [checkBox, setCheckBox] = useState([
     {id: v4(), checked: false, name: "React.js"}, 
     {id: v4(), checked: false, name: "JS"}, 
     {id: v4(), checked: false, name: "CSS"}, 
     {id: v4(), checked: false, name: "HTML"}])
 
-    let langValue = ""
 
     const handleCheckBox = (id) => {
       setCheckBox((prev) => {
@@ -31,23 +31,21 @@ const MainGrid = () => {
       })
     }
   
-
-  const renderFilters = () => {
-    const filterCheckBox = checkBox.filter(item => item.checked === true)
-    const filterMap = filterCheckBox.map(item => item.name);
-    return filterMap.join('&')  
-  }
-  
-  langValue = renderFilters()
-  console.log(langValue);
   
   useEffect(() => {
-    fetch(`/api/v1/projects?p=${page}`).then(
+    fetch(`/api/v1/projects?p=${page}&langauges=${langValue}`).then(
       response => response.json()
     ).then(
       data => setBackendData(data)
     )
-  }, [page])
+  }, [page, langValue])
+
+  useEffect(()=>{
+    setLangValue(() => {
+    const filterCheckBox = checkBox.filter(item => item.checked === true)
+    const filterMap = filterCheckBox.map(item => item.name);
+    return filterMap.join('&') })
+  }, [setLangValue, checkBox]) 
 
 
   const handlePrevious = () => {
