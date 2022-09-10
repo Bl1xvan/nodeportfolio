@@ -1,6 +1,6 @@
 
 .description::-webkit-scrollbar{
-    background: rgb(111, 111, 152);
+    background: rgb(111, 111, 111);
     width: 10px;
     border-radius: 10px;
 }
@@ -23,9 +23,9 @@
 }
 
 .hidedetails{
-    background-color: rgba(102, 102, 153);
+    background-color: rgba(102, 102, 102);
     border: none;
-    color: rgb(229, 229, 255);
+    color: rgb(229, 229, 229);
     font-size: 1.5em;
     font-weight: bold;
     padding: 15px;
@@ -33,14 +33,18 @@
 }
 
 .hidedetails:hover{
-    background-color:rgb(189, 251, 226);
-    color:rgb(111, 111, 152);
+    background-color:rgb(189, 189, 189);
+    color:rgb(60, 60, 60);
 }
 
 
 .fullinfo{
-    background-color: rgb(153, 153, 181);
+    background-color: rgb(153, 153, 153);
     padding: 2em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .fullproject-name{
@@ -74,15 +78,15 @@
     text-align: justify;
     overflow-y: scroll;
     display: inline;
-    color: rgb(229, 229, 255);
+    color: rgb(229, 229, 229);
     font-size: 1em;
 }
 
 .link{
     display: block;
-    background-color:rgb(111, 111, 152);
+    background-color:rgb(76, 76, 76);
     border-radius: 10px;
-    color: rgb(229, 229, 255);
+    color: rgb(229, 229, 229);
     padding: 10px 25px;
     margin: 5px;
     text-decoration: none;
@@ -90,8 +94,8 @@
 }
 
 .link:hover{
-    background-color:rgb(189, 251, 226);
-    color:rgb(111, 111, 152);
+    background-color:rgb(189, 189, 189);
+    color:rgb(111, 111, 111);
 }
 
 .language{
@@ -103,10 +107,6 @@
     .fullinfo{
         display: flex;
         flex-direction: column;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
         width: 90%;
         max-width: 500px;
     }
@@ -121,6 +121,7 @@
 
     .half img{
         min-height: 250px;
+        aspect-ratio: 1;
     }
 
 }
@@ -135,10 +136,6 @@
         display: grid;
         grid-column-gap: 3em;
         grid-template-columns: 1fr 1fr;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
         width: 90vw;
         max-width: 900px;
     }

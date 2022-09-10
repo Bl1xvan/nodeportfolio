@@ -84,8 +84,8 @@ const MainGrid = () => {
       <div className="middlecont">
       <div className="port-hdr"><h2>Projects</h2>
       </div>
-      <div><p>{title ? `Name: ${title}` : ""}</p></div>
-      <div><p>{langValue ? `Contains languages: ${langValue.replace(/&/g, ", ")}` : ""}</p></div>
+      <div><pre>{title ? `Name: ${title}` : " "}</pre></div>
+      <div><pre>{langValue ? `Contains languages: ${langValue.replace(/&/g, ", ")}` : " "}</pre></div>
       <Pagination key={v4()} pageJump={pageJump} page={page} toggleDisplay={toggleDisplay} backendData={backendData}/>
       <AllProjects key={v4()} backendData={backendData}/>
       <PgBtnPair handlePrevious={handlePrevious} handleNext={handleNext} page={page} backendData={backendData} /> 
