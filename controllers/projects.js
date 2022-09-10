@@ -37,11 +37,12 @@ const getAllProjects = asyncWrapper(async (req, res) => {
     const response = {
         error: false,
         total,
+        pageCount,
         next, 
         p: page + 1,
         limit,
         languages: languageOptions,
-        projects,
+        projects
     };
     res.status(200).json(response);
 })

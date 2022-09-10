@@ -1,7 +1,7 @@
 import React from 'react'
 import {IoMdArrowDropleft, IoMdArrowDropright} from "react-icons/io";
 
-const PgBtnPair = ({handlePrevious, handleNext, page}) => {
+const PgBtnPair = ({handlePrevious, handleNext, page, backendData}) => {
   return (
     <div className="pgbtnpair">
     <button className="pgbtn"
@@ -11,7 +11,7 @@ const PgBtnPair = ({handlePrevious, handleNext, page}) => {
 
     <button className="pgbtn" 
     onClick={handleNext}
-    disabled={page === 2}><IoMdArrowDropright />
+    disabled={backendData.next === "null"}><IoMdArrowDropright />
 </button>
 </div>
   )
