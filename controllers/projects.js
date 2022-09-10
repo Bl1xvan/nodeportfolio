@@ -41,7 +41,6 @@ const getAllProjects = asyncWrapper(async (req, res) => {
         next, 
         p: page + 1,
         limit,
-        languages: languageOptions,
         projects
     };
     res.status(200).json(response);
