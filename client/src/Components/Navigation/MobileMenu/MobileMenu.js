@@ -15,7 +15,7 @@ const MobileMenu = () => {
     <div className="M-navbar">
     <div className="menu">
       <span className="mobile-icons"><SocialMedia /></span>
-      <button className="togglebtn" onClick={toggleDisplay}>
+      <button type="button" className="togglebtn" onClick={toggleDisplay}>
         <FiMenu />
       </button>
     </div>

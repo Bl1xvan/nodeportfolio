@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Empty = ({message}) => {
+const Empty = ({emptyClass, message}) => {
   return (
     <>
-    <div className="message">{message}</div>
+    <div className={emptyClass}>{message}</div>
     <div className="main-cont" style={{visibility: "hidden"}}>
     </div>
     </>

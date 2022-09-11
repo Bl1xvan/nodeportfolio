@@ -8,7 +8,7 @@ const Overlay = ({img, title, desc, displayNone, langArr, repo, depl, displayCha
     <div className="overlay" style={displayChange}>
       <div className="fullinfo">
       <div className="hidediv">
-            <button className="hidedetails" onClick={displayNone}>X</button>
+            <button type="button" className="hidedetails" onClick={displayNone}>X</button>
           </div>
             <div className="half">
                 <img src={img} alt={title} />

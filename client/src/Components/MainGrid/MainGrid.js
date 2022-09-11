@@ -51,6 +51,10 @@ const MainGrid = () => {
     })
   }
 
+  const handleReset = () => {
+    document.querySelector(".searchbar").value = ""
+  }
+
 
   const handlePrevious = () => {
     
@@ -79,7 +83,14 @@ const MainGrid = () => {
 
   return (
     <div id="projectsdiv">
-      <ToggleDiv toggle={toggle} toggleDisplay={toggleDisplay} checkBox={checkBox} handleCheckBox={handleCheckBox} handleSearchBar={handleSearchBar} />
+      <ToggleDiv 
+          toggle={toggle} 
+          toggleDisplay={toggleDisplay} 
+          checkBox={checkBox} 
+          handleCheckBox={handleCheckBox} 
+          handleSearchBar={handleSearchBar}
+          handleReset={handleReset}
+      />
       <div className="maingrid">
       <div className="middlecont">
       <div className="port-hdr"><h2>Projects</h2>

@@ -12,7 +12,7 @@ const Thumbnail = ({title, displayBlock, depl}) => {
        </a>
     
       <div className="button-cont">
-        <button className="showdetails" onClick={displayBlock}>Details</button>
+        <button type="button" className="showdetails" onClick={displayBlock}>Details</button>
       </div>
     </div>
     

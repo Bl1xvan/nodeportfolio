@@ -10,7 +10,7 @@ const Pagination = ({pageJump, page, toggleDisplay, backendData}) => {
   }
   return (
     <div className="pgcont">
-    <button className="showside" onClick={toggleDisplay}>Show Filters</button>
+    <button type="button" className="showside" onClick={toggleDisplay}>Show Filters</button>
     <div className="pglabel">
     <h3>Page Number</h3>
     <select className="pgnum" value={page} onChange={(event) => {pageJump(event.target.value)}}>
