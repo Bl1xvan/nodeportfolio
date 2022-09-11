@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import './MobileMenu.css'
 import SocialMedia from '../SocialMedia'
 import { useSpring, animated } from 'react-spring'
+import { FiMenu } from "react-icons/fi";
 
 const MobileMenu = () => {
   const [toggle, setToggle] = useState(false);
@@ -15,7 +16,7 @@ const MobileMenu = () => {
     <div className="menu">
       <span className="mobile-icons"><SocialMedia /></span>
       <button className="togglebtn" onClick={toggleDisplay}>
-        {toggle? "Hide Menu" : "Show Menu"}
+        <FiMenu />
       </button>
     </div>
     <animated.span className="M-navbargrid" style={styles}>

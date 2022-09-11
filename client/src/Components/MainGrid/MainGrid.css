@@ -5,6 +5,13 @@
     align-items: center;  
 }
 
+.message{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .middlecont{
     width: 90%;
     margin: auto;
@@ -16,6 +23,7 @@
     background-color: rgb(220, 220, 220);
     padding: 25px;
     border-radius: 15px;
+    position: relative;
 }
 
 .port-hdr h2{
@@ -23,14 +31,23 @@
 }
 
 .pgbtn{
-    padding: 25px 20px;
+    padding: 25px;
     font-size: 1.5em;
     display: flex;
     align-items: center;
-    border-radius: 10px;
+    border-radius: 50%;
     border: none;
 }
 
+.pgbtn:enabled{
+    background-color: rgb(123, 123, 123);
+    color: white; 
+}
+
+.pgbtn:disabled{
+    background-color: rgb(211, 211, 211);
+    color: rgb(164, 164, 164);
+}
 
 
 .pgbtnpair{
@@ -96,9 +113,10 @@
 
 .tag{
     background-color: aliceblue;
-    font-size: 1.5em;
+    color:rgb(50, 50, 50);
+    font-size: 1em;
+    font-weight: bold;
     padding: 5px 10px;
-    text-align: center;
 }
 
 @media screen and (max-width: 800px){
@@ -109,6 +127,7 @@
     }
     .allprojects{
         width: 100%;
+        grid-template-rows: repeat(4, 1fr);
     }
 }
 
@@ -130,6 +149,7 @@
     .allprojects{
         width: 100%;
         grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
     }
 }
 

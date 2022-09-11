@@ -1,14 +1,15 @@
 import React from 'react'
 import OneProject from './OneProject'
 import "./MainGrid.css"
+import Empty from "./Empty"
 
 const AllProjects = ({backendData}) => {
 
   return (
     <div className="allprojects">
       {(typeof backendData.projects === 'undefined') ? (
-        <p>Loading...</p>
-      ) : (
+        <Empty message={"loading"}/>
+      ) : (backendData.total === 0) ? ( <Empty message={"No Results"} /> ) : (
         backendData.projects.map((project) => {
           const {title, repository, description, _id, deployment, image, languages} = project;
           return (
@@ -20,8 +21,7 @@ const AllProjects = ({backendData}) => {
                       depl={deployment}
                       img={image}
                       lang={languages}
-                      />
-                      
+                      />         
                   )
       })
       )}
