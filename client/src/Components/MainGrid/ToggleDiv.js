@@ -12,7 +12,7 @@ const ToggleDiv = ({toggle, toggleDisplay, checkBox, handleCheckBox, handleSearc
     <div className="filter-controls">
       <SearchBar handleSearchBar={handleSearchBar}/>
       <Tags checkBox={checkBox} handleCheckBox={handleCheckBox} />
-      <button type="button" onClick={handleReset}>Clear Search</button>
+      <button type="button" className="clearsearch" onClick={handleReset}>Clear Search</button>
     </div>
     <div className="toggle-controls" onClick={toggleDisplay}>
     <h3>Hide Filters</h3>

@@ -19,6 +19,19 @@
     position: relative;
 }
 
+.clearsearch{
+    margin: 10px 0;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 1em;
+    color:rgb(50, 50, 50);
+}
+
+.clearsearch:hover{
+    background-color: rgb(50, 50, 50);
+    color: white;
+}
+
 .port-hdr h2{
     font-size: 3.5em;
 }

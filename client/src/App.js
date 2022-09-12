@@ -4,6 +4,7 @@ import About from './Components/About/About'
 import Welcome from './Components/Welcome/Welcome' 
 import Navigation from './Components/Navigation/Navigation'
 import MainGrid from './Components/MainGrid/MainGrid'
+import Contact from './Components/Contact/Contact'
 
 const App = () => {
 
@@ -13,6 +14,7 @@ const App = () => {
       <Welcome />
       <About />
       <MainGrid />
+      <Contact />
     </div>
   )
 }

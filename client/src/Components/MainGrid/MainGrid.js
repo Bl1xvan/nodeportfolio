@@ -53,6 +53,12 @@ const MainGrid = () => {
 
   const handleReset = () => {
     document.querySelector(".searchbar").value = ""
+    setTitle("")
+    setCheckBox((prev) => {
+      return prev.map((item) => {
+        return {...item, checked: false}
+      })
+    })
   }
 
 
