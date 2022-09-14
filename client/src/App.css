@@ -22,8 +22,18 @@ body{
 
 #aboutdiv, #projectsdiv{
     min-height: 100vh;
-    display: flex;
     
+}
+
+#aboutdiv, #projectsdiv,  #contactdiv{
+    display: flex;
+}
+
+#contactdiv{
+    min-height: 60vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
 }
 
 #aboutdiv{

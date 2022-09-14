@@ -1,0 +1,43 @@
+#formdiv{
+    width: 85%;
+    margin: auto;
+}
+
+#send-email{
+    background-color: rgb(171, 171, 171);
+    display: grid;
+    gap: 1em;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+#send-email input{
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+#send-email label{
+    font-size: 1.25em;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+
+#message{
+    min-height: 75px;
+    border-radius: 10px;
+    border: none;
+}
+
+@media screen and (min-width: 800px){
+    #send-email{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .span2{
+        grid-column: 1 / span 2;
+    }
+}
+

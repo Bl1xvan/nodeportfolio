@@ -29,6 +29,9 @@ const MobileMenu = () => {
         <a href="#projectsdiv">
           Projects
         </a>
+        <a href="#contactdiv">
+          Contact
+        </a>
     </animated.span>
   </div>
   )
