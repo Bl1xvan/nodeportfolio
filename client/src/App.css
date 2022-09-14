@@ -31,9 +31,11 @@ body{
 
 #contactdiv{
     min-height: 60vh;
-    flex-direction: column;
+    width: 90%;
+    margin: auto;
     justify-content: center;
     align-items: stretch;
+    flex-direction: column;
 }
 
 #aboutdiv{
