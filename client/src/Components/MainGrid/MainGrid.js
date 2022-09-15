@@ -99,7 +99,7 @@ const MainGrid = () => {
       />
       <div className="maingrid">
       <div className="middlecont">
-      <div className="port-hdr"><h2>Projects</h2>
+      <div className="port-hdr"><h2 id="toppoint">Projects</h2>
       </div>
       <div><pre>{title && `Name: ${title} |`} {langValue && `Contains languages: ${langValue.replace(/&/g, ", ")}`}</pre></div>
       <Pagination key={v4()} pageJump={pageJump} page={page} toggleDisplay={toggleDisplay} backendData={backendData}/>

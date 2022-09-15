@@ -27,6 +27,7 @@ const AllProjects = ({backendData}) => {
                   )
       })
       )}
+      <a id="totop" href="#toppoint">^</a>
     </div>
   )
 }

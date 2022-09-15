@@ -1,20 +1,39 @@
+#contact-header{
+    font-size: 3em;
+}
+
+#contact-media a{
+    display: inline-block;
+    background-color: gray;
+    padding: 15px;
+    aspect-ratio: 1;
+    margin: 5px;
+}
+
 #calltoaction{
     padding: 20px;
     max-width: 600px;
+    display: flex;
+    flex-direction: column;
 }
 
+#calltoaction p{
+    font-size: 1.25em;
+    font-weight: bold;
+    color:rgb(55, 55, 55);
+}
 #formdiv{
     width: 100%;
-    margin: 0 auto;
-    display: grid;
-    background-color: rgb(212, 212, 212);
-    border-radius: 10px;
+    margin: 0 auto 70px;
+    
 }
 
 #send-email{
     display: grid;
     gap: 1em;
     padding: 25px;
+    background-color: rgb(212, 212, 212);
+    border-radius: 10px;
 }
 
 #send-email input{
@@ -46,6 +65,12 @@
     padding: 10px;
 }
 
+#submit{
+    font-size: 1.3em;
+    font-weight: bold;
+    display: block;
+}
+
 @media screen and (min-width: 800px){
     #send-email{
         grid-template-columns: 1fr 1fr;
@@ -58,6 +83,7 @@
 
 @media screen and (min-width: 900px){
     #formdiv{
+        display: grid;
         grid-template-columns: auto 1fr;
     }
 }
