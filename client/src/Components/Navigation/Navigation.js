@@ -11,7 +11,7 @@ const Navigation = () => {
   
   return (
     <>
-      {width < 600 ? <MobileMenu /> : <DesktopMenu /> }
+      {width < 650 ? <MobileMenu /> : <DesktopMenu /> }
     </>
   )
 }
