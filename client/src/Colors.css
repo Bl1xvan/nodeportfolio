@@ -1,0 +1,180 @@
+:root {
+    --navy: #283044;
+    --lavender: #B388EB;
+    --dark-lav: rgb(82, 68, 113);
+    --periw: #8093F1;
+    --white: #F9F8F8;
+    --black: #04030F;
+    --light-gray: #9b9b9b;
+    --shadow: 0 4px 8px 0 var(--light-gray), 0 6px 20px 0 var(--light-gray);
+}
+
+/*About div*/
+
+.info-grid{
+    box-shadow: var(--shadow);
+    border: 2px solid var(--light-gray);
+}
+
+.badge{
+    background-color: var(--lavender);
+}
+
+/* portfolio div */
+
+.allprojects{
+    background-color: var(--white);
+}
+
+.main-cont{
+    background-color: var(--lavender);
+}
+
+.clearsearch{
+    color:rgb(50, 50, 50);
+}
+
+.clearsearch:hover{
+    background-color: rgb(50, 50, 50);
+    color: white;
+}
+
+.pgbtn:enabled{
+    background-color: var(--white);
+    border: 1px solid var(--light-gray);
+    box-shadow: var(--shadow);
+    color: var(--navy); 
+}
+
+.pgbtn:disabled{
+    visibility: hidden;
+}
+
+.thumbnail-link{
+    color: black;
+}
+
+#totop{
+    background-color: rgb(116, 116, 116);
+    color: white;
+}
+
+.button-cont:hover {
+    background-color: var(--dark-lav);
+}
+
+.showdetails{
+    background-color: transparent;
+    border-top: 4px solid white;
+}
+
+.showside{
+    background-color: var(--navy);
+    color: white;
+}
+
+.showside:hover{
+    border: 2px solid gray;
+    background-color: white;
+    color:rgb(50, 50, 50);
+}
+
+.thumbnail-link:hover{
+    background-color: var(--dark-lav); 
+}
+
+.thumbnail-link:hover .smloverlay{
+    background-color: rgb(246, 159, 243);
+}
+
+.button-cont:hover > .showdetails{
+    color: white;
+}
+
+/*Call to action*/
+
+#calltoaction p{
+    color:rgb(55, 55, 55);
+}
+
+#contact-media a {
+    background-color: var(--navy);
+}
+
+#message{
+    background-color: rgb(158, 158, 158);
+    color: black;
+}
+
+.notfound, .loading{
+    color:rgb(50, 50, 50);
+}
+
+
+#send-email{
+    --light-lav: #9b9b9b;
+    box-shadow: 0 4px 8px 0 var(--light-lav), 0 6px 20px 0 var(--light-lav);
+}
+
+#send-email input, #send-email textarea{
+    background-color: var(--lavender);
+    color: black;
+}
+
+#send-email > label > span{
+    color:var(--navy)
+}
+
+
+
+.togglediv{
+    background-color: gray;
+}
+
+.tag{
+    background-color: aliceblue;
+    color:rgb(50, 50, 50);
+}
+
+
+
+/* Menu bar*/
+
+.menu{
+    background-color: var(--periw);
+}
+  
+.M-navbargrid a{
+  color: black;
+  border-bottom: 1px solid black;
+  background-color: rgb(156, 245, 255);
+
+  }
+  
+.M-navbargrid a:hover{
+  background-color: rgb(32, 61, 165);
+  color: white;
+  }
+  
+.togglebtn{
+    color: white;
+    background-color: rgb(60, 25, 93);
+}
+  
+.togglebtn:hover{
+    background-color: rgb(221, 185, 255);
+    color: rgb(60, 25, 93);
+}
+
+.D-navbar{
+    background-color: var(--navy);
+}
+
+.D-navbargrid a, .desktop-icons a{
+  color: white;
+}
+
+.D-navbargrid a:hover{
+  background-color: rgb(221, 185, 255);
+  color: rgb(60, 25, 93);
+}

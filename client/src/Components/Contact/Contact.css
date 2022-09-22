@@ -4,7 +4,6 @@
 
 #contact-media a{
     display: inline-block;
-    background-color: gray;
     padding: 15px;
     aspect-ratio: 1;
     margin: 5px;
@@ -20,7 +19,7 @@
 #calltoaction p{
     font-size: 1.25em;
     font-weight: bold;
-    color:rgb(55, 55, 55);
+
 }
 #formdiv{
     width: 100%;
@@ -32,7 +31,6 @@
     display: grid;
     gap: 1em;
     padding: 25px;
-    background-color: rgb(212, 212, 212);
     border-radius: 10px;
 }
 
@@ -40,14 +38,12 @@
     padding: 10px;
     border-radius: 5px;
     border: none;
-    background-color: rgb(158, 158, 158);
-    color: black;
+
 }
 
 #send-email > label > span{
     font-weight: bold;
     font-size: 1.25em;
-    color:rgb(46, 46, 46);
 }
 
 .label-column{
@@ -60,8 +56,6 @@
     min-height: 150px;
     border-radius: 10px;
     border: none;
-    background-color: rgb(158, 158, 158);
-    color: black;
     padding: 10px;
 }
 

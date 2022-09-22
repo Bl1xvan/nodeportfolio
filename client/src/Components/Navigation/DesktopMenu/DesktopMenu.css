@@ -1,5 +1,4 @@
 .D-navbar{
-    background-color: rgb(78, 30, 123);
     z-index: 4;
     position: fixed;
     left: 0;
@@ -12,14 +11,9 @@
 
 .D-navbargrid a, .desktop-icons a{
   display: inline-block;
-  color: white;
   text-decoration: none;
   font-weight: bold;
   padding: 10px 20px;
 }
 
-.D-navbargrid a:hover{
-  background-color: rgb(221, 185, 255);
-  color: rgb(60, 25, 93);
-}
 

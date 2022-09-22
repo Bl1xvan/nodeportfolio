@@ -13,7 +13,6 @@
 .allprojects{
     display: grid;
     gap: .7em;
-    background-color: rgb(220, 220, 220);
     padding: 25px;
     border-radius: 15px;
     position: relative;
@@ -24,12 +23,6 @@
     padding: 10px;
     font-weight: bold;
     font-size: 1em;
-    color:rgb(50, 50, 50);
-}
-
-.clearsearch:hover{
-    background-color: rgb(50, 50, 50);
-    color: white;
 }
 
 .port-hdr h2{
@@ -43,16 +36,6 @@
     align-items: center;
     border-radius: 50%;
     border: none;
-}
-
-.pgbtn:enabled{
-    background-color: rgb(123, 123, 123);
-    color: white; 
-}
-
-.pgbtn:disabled{
-    background-color: rgb(211, 211, 211);
-    color: rgb(164, 164, 164);
 }
 
 
@@ -95,19 +78,10 @@
     font-size: 1.25em;
     padding: 10px;
     border-radius: 5px;
-    background-color: gray;
-    color: white;
     border: none;
 }
 
-.showside:hover{
-    border: 2px solid gray;
-    background-color: white;
-    color:rgb(50, 50, 50);
-}
-
 .togglediv{
-    background-color: gray;
     display: flex;
     align-items: center;
     height: 100%;
@@ -128,8 +102,6 @@
 }
 
 .tag{
-    background-color: aliceblue;
-    color:rgb(50, 50, 50);
     font-size: 1em;
     font-weight: bold;
     padding: 5px 10px;
@@ -143,15 +115,12 @@
     padding: 30px;
     border-radius: 50%;
     aspect-ratio: 1;
-    background-color: rgb(116, 116, 116);
-    color: white;
     font-weight: bold;
     text-decoration: none;
 }
 .notfound, .loading{
     font-size: 2em;
     font-weight: bold;
-    color:rgb(50, 50, 50);
     position: absolute;
     top: 50%;
     left: 50%;
