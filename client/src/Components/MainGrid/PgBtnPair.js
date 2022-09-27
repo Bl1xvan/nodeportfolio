@@ -8,7 +8,7 @@ const PgBtnPair = ({handlePrevious, handleNext, page, backendData}) => {
       type="button"
       className="pgbtn"
       onClick={handlePrevious}
-      disabled={page === 1}><IoMdArrowDropleft />
+      disabled={page===1}><IoMdArrowDropleft />
     </button>
 
     <button 
