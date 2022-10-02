@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const projects = require('./routes/projects');
+const authRoutes = require('./routes/auth-routes');
 const connectDB = require('./db/connect');
 require('dotenv').config();
 const notFound = require('./middleware/not-found');
@@ -10,7 +11,7 @@ app.use(express.static('./public'));
 
 app.use(express.json())
 app.use('/api/v1/projects', projects)
-
+app.use('/api', authRoutes);
 
 app.use(notFound)
 app.use(errorHandlerMiddleware)
