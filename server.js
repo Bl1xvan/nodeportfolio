@@ -1,13 +1,14 @@
+require('dotenv').config();
 const express = require('express');
 const app = express();
 const projects = require('./routes/projects');
 const authRoutes = require('./routes/auth-routes');
 const connectDB = require('./db/connect');
-require('dotenv').config();
+const { join } = require("path");
 const notFound = require('./middleware/not-found');
 const errorHandlerMiddleware = require('./middleware/error-handler');
 
-app.use(express.static('./public'));
+app.use('/', express.static('./public'));
 
 app.use(express.json())
 app.use('/api/v1/projects', projects)
@@ -18,9 +19,9 @@ app.use(errorHandlerMiddleware)
 
 const port = process.env.PORT || 5000;
 
-const path = require("path");
 
-app.use(express.static(path.join(__dirname, "/client/build")));
+
+app.use('/', express.static(join(__dir__, 'client', 'build')));
 
 app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "client", "build", "index.html"));
@@ -35,9 +36,6 @@ const start = async () =>{
         console.log(error)
     }
 }
-
-
-
 
 start()
 
